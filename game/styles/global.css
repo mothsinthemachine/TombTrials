@@ -1,0 +1,89 @@
+:root {
+	--canvas-background:rgb(34, 34, 34);
+	--border-color:#291d4d;
+	--dialog-background:#fff3b4;
+	--menu-background:#fff3b4;
+	--menu-border-color:#a48465;
+	--menu-font-color:#3a160d;
+	--menu-selected-background:#7fc2ff;
+	--game-scale:2;
+	--scene-transition-time:0.6s;
+
+	--bodyBackColor:rgb(51,51,51);
+	--canvasBackColor:rgb(34,34,34);
+
+	--fontFamily:'DotGothic16', "Courier New", Courier, monospace;
+	--fontColorLight:white;
+	--fontColorDark:black;
+	--fontSizeSmall:8px;
+	--fontSize:12px;
+	--fontSizeLarge:16px;
+
+	--viewWidth:256px;
+	--viewHeight:224px;
+	--viewScale:2;
+
+	--transitionDuration:0.45s;
+
+}
+
+* {
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+}
+
+body {
+	overflow:hidden;
+	background:var(--bodyBackColor);
+	font-family:var(--fontFamily);
+	font-size:var(--fontSize);
+	font-weight:normal;
+	-webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+}
+
+.game-header {
+	text-align:center;
+	height:32px;
+}
+
+.game-header > h1 {
+	color:var(--fontColorLight);
+	font-size:28px;
+}
+
+.game-body {
+	display:flex;
+	flex-direction:row;	
+	flex-wrap:nowrap;
+	justify-content:center;
+}
+
+.left-margin, .right-margin {
+	flex-grow: 1;
+}
+
+.game-container {
+	position:relative;
+	display:block;
+	width:calc(var(--viewWidth) * var(--viewScale));
+	height:calc(var(--viewHeight) * var(--viewScale));
+	/* margin:32px auto 0; */
+	border: 1px solid var(--fontColorLight);
+	background:var(--canvasBackColor);
+	transform-origin: top left;
+}
+
+.game-container > * {
+	transform-origin: inherit;
+	transform: scale(var(--viewScale));
+	image-rendering:pixelated;
+}
+
+.game-container > canvas {
+	z-index:0;
+}

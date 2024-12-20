@@ -1,0 +1,118 @@
+/* For all menus */
+
+.MenuBackground {
+	position:absolute;
+	z-index:2;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	background-color:#222;
+	opacity:0.33;
+}
+
+.DescriptionBox {
+	position:absolute;
+	z-index:3;
+	bottom:0;
+	left:0;
+	right:0;
+	height:28px;
+	padding:2px;
+	color: var(--menu-font-color);
+	background:var(--menu-background);
+	border-top: 1px solid var(--menu-border-color);
+}
+
+/* Pause Menu */
+
+.PauseMenu {
+	position:absolute;
+	z-index:3;
+	top:8px;
+	left:8px;
+	width:240px;
+	height:208px;
+	padding:2px 4px;
+	background: var(--menu-background);
+	color:var(--menu-font-color);
+	border:1px solid var(--menu-border-color);
+	font-size:10px;
+	color:var(--menu-font-color);
+}
+
+.PauseMenu h2 {
+	margin:0;
+	padding:2px 0;
+	text-align:center;
+	border-bottom:1px solid var(--menu-border-color);
+	font-size:inherit;
+	font-weight:normal;
+}
+
+.PauseMenu table {
+	border-collapse:collapse;
+	width:100%;
+	margin-bottom:1em;
+}
+
+.PauseMenu table td {
+	padding:1px 2px;
+	border:1px solid var(--menu-border-color);
+}
+
+.MenuButton {
+	position:absolute;
+	z-index:4;
+	width: auto;
+	height: auto;
+	background-color: var(--menu-background);
+	border: 1px solid var(--menu-border-color);
+	font-family:inherit;
+	font-size:inherit;
+	transition-duration:0.5s;
+}
+
+.MenuButton:hover {
+	background-color: var(--menu-selected-background);
+}
+
+.MenuButton:active {
+	background-color:white;
+	color:#222;
+	transition-duration:100ms;
+}
+
+.MenuButton.disabled {
+	opacity:0.6;
+	background-color:firebrick;
+	cursor:not-allowed;
+	transition-duration:10ms;
+}
+
+.MenuButton.disabled:hover {
+	opacity:0.4;
+}
+
+.MenuButton.SaveButton {
+	bottom:16px;
+	left:16px;
+}
+
+.MenuButton.CloseButton {
+	bottom:16px;
+	right:16px;
+}
+
+
+.PauseMenu .KeyboardMenu {
+	position:relative;
+	border:0;
+}
+
+
+
+.PauseMenu .KeyboardMenu button {
+	padding-left:32;
+	text-align:center;
+}

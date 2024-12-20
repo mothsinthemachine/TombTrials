@@ -1,0 +1,84 @@
+.battle-info {
+	position:absolute;
+	display:block;
+	top:0;
+	left:2px;
+	right:2px;
+	margin:0;
+	padding:2px 4px;
+	background-color:var(--menu-background);
+}
+
+.battle-info p {
+	margin:inherit;
+	font-size:10px;
+	line-height:12px;
+	margin-bottom:2px;
+}
+
+.battle-hud {
+	position:absolute;
+	bottom:0;
+	left:2px;
+	right:2px;
+	margin:0;
+	padding:2px 4px;
+	background-color:var(--menu-background);
+}
+
+.battle-hud .hud-row {
+	display:flex;
+	flex-direction:row;
+	flex-wrap:nowrap;
+	align-content:space-between;
+	align-items:baseline;
+	width:100%;
+	padding-bottom:2px;
+}
+
+.hud-row div {
+	display:inline-block;
+}
+
+.hud-row .arrow {
+	width:32px;
+}
+
+.hud-row .name {
+	width:16ch;
+}
+
+.hud-row .health, .mana, .time {
+	font-size:10px;
+	line-height:8px;
+	margin-left:2px;
+	padding:0;
+}
+
+.hud-row .health {
+	width: 100px;
+}
+
+.hud-row .health p, .mana p, .time p {
+	z-index:2;
+	position:relative;
+	top:-1px;
+	margin:0;
+	padding:0;
+	text-align:center;
+}
+
+.hud-row .health .hp-bar, .mana .mp-bar, .time .time-bar {
+	z-index:0;
+	position:relative;
+	top:-3px;
+	width:100%;
+	height:5px;
+	margin:0;
+	/* background-color:var(--canvas-background); */
+	background-color:#ddd;
+}
+
+.hud-row .mana, .time {
+	width:60px;
+}

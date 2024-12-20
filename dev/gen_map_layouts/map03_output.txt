@@ -1,0 +1,14 @@
+Copy and paste the following into the configuration file for the map:
+"                          ",
+"   x   x                  ",
+"xxx xxx xxx               ",
+"x         x               ",
+"x         x               ",
+"x x     x x          x    ",
+"x x     x x       xxx xxxx",
+"x x     x x       x    y x",
+"x         x       x   yy x",
+"x         x       x   y  x",
+"x         x       x   yy x",
+"xxxxx xxxxx       x    y x",
+"    x x           xxxxxxxx"

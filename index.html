@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Tomb Trials</title>
+		<!-- Fonts -->
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DotGothic16">
+		<!-- Stylesheets -->
+		<link href="game/styles/global.css" type="text/css" rel="stylesheet">
+		<link href="game/styles/TextMessage.css" type="text/css" rel="stylesheet">
+		<link href="game/styles/SceneTransition.css" type="text/css" rel="stylesheet">
+		<link href="game/styles/KeyboardMenu.css" type="text/css" rel="stylesheet">
+		<link href="game/styles/Menus.css" type="text/css" rel="stylesheet">
+		<link href="game/styles/TitleScreen.css" type="text/css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="game-header"></div>
+		<div class="game-body">
+			<div class="left-margin"></div>
+			<div class="game-container" id="gameContainer">
+				<canvas class="game-canvas" width="256" height="224">Your browser does not support the canvas tag.</canvas>
+			</div>
+			<div class="right-margin"></div>
+		</div>
+		<div class="game-footer"></div>
+		<!-- Main scripts -->
+		<script src="game/utils.js"></script>
+		<!-- <script src="game/DirectionInput.js"></script> -->
+		<script src="game/ControlInput.js"></script>
+		<script src="game/KeyPressListener.js"></script>
+		<!-- Content scripts -->
+		<script src="game/content/MapConfigurations.js"></script>
+		<!-- State and Progress scripts -->
+		<script src="game/state/PlayerState.js"></script>
+		<script src="game/state/Progress.js"></script>
+		<!-- Overworld scripts -->
+		<script src="game/overworld/Overworld.js"></script>
+		<script src="game/overworld/OverworldMap.js"></script>
+		<script src="game/overworld/OverworldEvent.js"></script>
+		<script src="game/overworld/Camera.js"></script>
+		<script src="game/overworld/SceneTransition.js"></script>
+		<!-- Game Object scripts -->
+		<script src="game/objects/GameObject.js"></script>
+		<script src="game/objects/Actor.js"></script>
+		<script src="game/objects/Door.js"></script>
+		<script src="game/objects/WallSwitch.js"></script>
+		<script src="game/objects/FloorSwitch.js"></script>
+		<script src="game/objects/MovingBlock.js"></script>
+		<script src="game/objects/TreasureBox.js"></script>
+		<script src="game/objects/Sprite.js"></script>
+		<!-- Menu scripts -->
+		<script src="game/menus/TitleScreen.js"></script>
+		<!-- Text object scripts -->
+		<script src="game/text_objects/TextMessage.js"></script>
+		<script src="game/text_objects/RevealingText.js"></script>
+		<script src="game/text_objects/KeyboardMenu.js"></script>
+		<script src="game/text_objects/PauseMenu.js"></script>
+		<!-- <script src="game/text_objects/TitleScreen.js"></script> -->
+		<!-- Init script (This is the final script that creates the game!) -->
+		<script src="game/init.js"></script>
+	</body>
+</html>

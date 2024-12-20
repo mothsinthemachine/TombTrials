@@ -1,0 +1,90 @@
+:root {
+	--buttonColor:rgba(230,230,230,1);
+	--buttonHover:rgba(255,254,179,1);
+	--buttonDisabled:rgb(104, 103, 94);
+	--titleFadeDuration: 0.9s;
+}
+
+@keyframes titleFadeIn {
+	from { opacity:0; }
+	to { opacity:1; }
+}
+
+@keyframes titleFadeOut {
+	from { opacity:1; }
+	to { opacity:0; }
+}
+
+.title-screen {
+	z-index:10;
+	display:block;
+	position:absolute;
+	top:0;
+	left:0;
+	width:calc(var(--viewWidth) - 1px);
+	height:calc(var(--viewHeight) - 1px);
+	background-color:var(--canvasBackColor);
+	font-family:var(--fontFamily);
+	font-size:var(--fontSize);
+	color:var(--fontColorDark);
+	animation-delay:1s;
+}
+
+.title-screen.fade-in {
+	animation: titleFadeIn var(--titleFadeDuration) forwards;
+}
+
+.title-screen.fade-out {
+	animation: titleFadeOut var(--titleFadeDuration) forwards;
+}
+
+.title-screen > img {
+	display:block;
+	width:255px;
+	height:auto;
+	margin:64px auto 64px;
+}
+
+.title-screen > .button-container {
+	display:flex;
+	flex-direction:row;
+	position:relative;
+	width:fit-content;
+	margin:0 auto;
+	justify-content:center;
+	animation-delay:var(--titleFadeDuration);
+	animation: titleFadeIn var(--titleFadeDuration) forwards;
+}
+
+.title-screen > .button-container > button {
+	border-radius:0;
+	font-family:inherit;
+	background-color:var(--buttonColor);
+	padding:2px 2ch;
+	margin-left:4px;
+	font-size:inherit;
+	border-width:1px;
+}
+
+.title-screen > .button-container > button:first-child {
+	margin-left:0;
+}
+
+.title-screen > .button-container > button.disabled {
+	background-color:var(--buttonDisabled);
+}
+
+.title-screen > .button-container > button:not(.disabled):hover,
+.title-screen > .button-container > .selected {
+	background-color:var(--buttonHover);
+}
+
+.title-screen > .descriptor {
+	position:absolute;
+	bottom:0;
+	left:0;
+	right:0;
+	padding:1px 2px;
+	color:var(--fontColorLight);
+	font-size:inherit;
+}

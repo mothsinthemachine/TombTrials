@@ -1,0 +1,71 @@
+/* This code was copy-paste from the tutorial rather than typed by hand */
+.KeyboardMenu {
+	position: absolute;
+	border: 1px solid var(--border-color);
+	background: var(--menu-background);
+}
+
+.KeyboardMenu button {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	text-align:left;
+	-webkit-appearance: none;
+	border:0;
+	background: transparent;
+	height: 20px;
+	cursor:pointer;
+	font-family:inherit;
+	padding:0;
+	padding-left: 1em;
+	font-size: 10px;
+}
+
+.KeyboardMenu button:hover, button:focus {
+	background: var(--menu-selected-background);
+	outline: 0;
+}
+
+.KeyboardMenu .option {
+	position: relative;
+}
+
+.KeyboardMenu .option .right {
+	position: absolute;
+	right:0;
+	top:0;
+	bottom:0;
+	font-size: 10px;
+	display: flex;
+	align-items: center;
+	padding-right: 3px;
+}
+
+.DescriptionBox {
+	position:absolute;
+	bottom:0;
+	left:0;
+	right:0;
+	height:2em;
+	color: var(--menu-font-color);
+	border-top: 1px solid var(--menu-border-color);
+	background:var(--menu-background);
+	padding: 2px;
+	line-height:11px;
+}
+
+.DescriptionBox p {
+	font-size: 10px;
+	margin:0;
+}
+.DescriptionBox p span.warning {
+	font-size: 8px;
+	color: red
+}
+
+/* Battle specific */
+/* .Battle .KeyboardMenu {
+	right:0;
+	bottom:0;
+	width: 140px;
+} */

@@ -1,0 +1,44 @@
+.TextMessage {
+	position:absolute;
+	left:0;
+	right:0;
+	bottom:0;
+	height:48px;
+	font-size:12px;
+	margin:0;
+	padding:0 4px;
+	background:#111;
+	color:#fff;
+	border-top:1px solid #fff;
+	/* font-family: monospace; */
+}
+
+.TextMessage_p {
+	margin:0;
+	line-height:14px;
+	font-size:12px;
+}
+
+.TextMessage span {
+	opacity:.01;
+}
+
+.TextMessage span.revealed {
+	opacity:1;
+}
+
+.TextMessage_button {
+	margin:0;
+	font-size:8px;
+	padding:2px;
+	-webkit-appearance:none;
+	color:inherit;
+	background:transparent;
+	border:none;
+	font-family:inherit;
+	cursor:pointer;
+
+	position:absolute;
+	right:2px;
+	bottom:0;
+}
